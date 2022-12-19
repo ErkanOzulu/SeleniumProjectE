@@ -32,8 +32,8 @@ public class T5_GetText_GetAttribute {
         // name attribute has "firstname" value
         //WebElement firstNameInput = driver.findElement(By.name("firstname"));
 
-        WebElement firstElementInput=driver.findElement(By.className("form-control"));
-
+       WebElement firstElementInput=driver.findElement(By.className("form-control"));
+      //  WebElement firstElementInput=driver.findElement(By.name("firstname"));
         //5- Verify placeholder attribute’s value is as expected:
         //Expected: first name
         String actualPlaceHolder =firstElementInput.getAttribute("placeholder");

@@ -33,9 +33,9 @@ public class T3_GoogleSearch {
         String actualTitle=driver.getTitle();
         
         if (actualTitle.startsWith(expectedInTitle)){
-            System.out.println("Title verification PASSED!");
+            System.out.println("Title verification is PASSED!");
         }else {
-            System.out.println("Title verification FAILED");
+            System.out.println("Title verification is FAILED");
         }
 
 
