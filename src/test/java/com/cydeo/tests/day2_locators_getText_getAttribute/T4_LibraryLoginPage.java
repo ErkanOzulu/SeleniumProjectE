@@ -27,8 +27,8 @@ public class T4_LibraryLoginPage {
 
         //5. Click the sign-in button
 
-        WebElement signin=driver.findElement(By.tagName("button"));
-        signin.click();
+        WebElement signIn=driver.findElement(By.tagName("button"));
+        signIn.click();
 
         //6. Verify: visually “Sorry, Wrong Email or Password”
         //displayed
