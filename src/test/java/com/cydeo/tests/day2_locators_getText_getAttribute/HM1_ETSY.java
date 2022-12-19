@@ -14,6 +14,9 @@ public class HM1_ETSY {
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.etsy.com");
+        // ADD THE FOLLOWİNG LINE TO ACCEPT COOKIES ON THE POP-UP WINDOW TO BE ABLE TO MOVE FURTHER STEPS
+        // driver.findElement(By.xpath("/html/body/div[5]/div[2]/div/div[2]/div/div[2]/div[2]/button")).click();
+
         WebElement inputSearch= driver.findElement(By.name("search_query"));
         inputSearch.sendKeys("wooden spoon", Keys.ENTER);
 
