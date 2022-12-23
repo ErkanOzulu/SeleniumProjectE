@@ -17,7 +17,8 @@ public class HM2_ZeroBank {
 
         //3. Verify header text
         //Expected: “Log in to ZeroBank”
-        WebElement header= driver.findElement(By.className("page-header"));
+       // WebElement header= driver.findElement(By.className("page-header"));
+        WebElement header= driver.findElement(By.tagName("h3"));
         String actualHeaderText=header.getText();
         String expectedHeaderText="Log in to ZeroBank";
 

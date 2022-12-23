@@ -17,7 +17,10 @@ public class HM1_ETSY {
         // ADD THE FOLLOWİNG LINE TO ACCEPT COOKIES ON THE POP-UP WINDOW TO BE ABLE TO MOVE FURTHER STEPS
         // driver.findElement(By.xpath("/html/body/div[5]/div[2]/div/div[2]/div/div[2]/div[2]/button")).click();
 
-        WebElement inputSearch= driver.findElement(By.name("search_query"));
+       WebElement inputSearch= driver.findElement(By.name("search_query"));
+        //WebElement inputSearch= driver.findElement(By.id("global-enhancements-search-query"));
+        //WebElement inputSearch= driver.findElement(By.id("search-query"));// doesn't locate the element because this ıd doesn't belong to any element only the attribute
+
         inputSearch.sendKeys("wooden spoon", Keys.ENTER);
 
         String expectedTitle="Wooden spoon | Etsy";
@@ -28,7 +31,7 @@ public class HM1_ETSY {
         } else {
             System.out.println("Title verification is FAİLED!");
         }
-
+            driver.close();
 
 
     }
