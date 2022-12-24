@@ -69,11 +69,15 @@ public class BasicNavigations {
 
 
         //this will close only the currently opened window
-        driver.close();
+         driver.close();
+
+
 
         //it kills the current session.We cannot execute any more line of codes
         //it means if more than one window was opened, everything will be closed
-        driver.quit();
+      driver.quit();
+
+
 
 
 
