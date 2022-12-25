@@ -22,7 +22,7 @@ public class WebDriverFactory {
             WebDriverManager.firefoxdriver().setup();
             return new FirefoxDriver();
         }else {
-            System.out.println("Given browser type doesn't exist/or is norn currently supported");
+            System.out.println("Given browser type doesn't exist/or is not currently supported");
             System.out.println("Driver=null");
             return null;
         }
