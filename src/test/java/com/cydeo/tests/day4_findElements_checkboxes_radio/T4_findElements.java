@@ -22,7 +22,8 @@ public class T4_findElements {
         driver.get("https://practice.cydeo.com/abtest");
 
     //3- Locate all the links in the page.
-        //windows+enter --->press enter gain
+        //windows : alt+enter --> press enter again
+        //mac     : option + Enter --> press enter again
 
         List<WebElement> allLinks = driver.findElements(By.tagName("a"));
 
