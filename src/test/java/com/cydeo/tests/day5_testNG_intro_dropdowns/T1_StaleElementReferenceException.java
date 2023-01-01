@@ -42,6 +42,7 @@ public class T1_StaleElementReferenceException {
             System.out.println("-->This means the web element is completely deleted from the page");
             System.out.println("deleteButton.isDisplayed() = false");
         }
+        driver.close();
 
     }
 
