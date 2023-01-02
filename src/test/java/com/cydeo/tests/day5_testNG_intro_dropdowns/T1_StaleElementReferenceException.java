@@ -20,8 +20,8 @@ public class T1_StaleElementReferenceException {
 
         driver.get("https://practice.cydeo.com/add_remove_elements/");
         //3. Click to “Add Element” button
-        //button[@onclick='addElement()']
-        WebElement addElementBtn = driver.findElement(By.xpath("//button[.='Add Element']"));
+
+        WebElement addElementBtn = driver.findElement(By.xpath("//button[.='Add Element']"));//button[@onclick='addElement()']
         Thread.sleep(2000);
         addElementBtn.click();
 
@@ -35,13 +35,18 @@ public class T1_StaleElementReferenceException {
 
         //6. Verify “Delete” button is NOT displayed after clicking.
 
+
+
         try {
             System.out.println("deleteButton.isDisplayed() = " + deleteButton.isDisplayed());
+
         } catch (StaleElementReferenceException e) {
             System.out.println("-->StaleElementReferenceException is thrown");
             System.out.println("-->This means the web element is completely deleted from the page");
             System.out.println("deleteButton.isDisplayed() = false");
         }
+
+
         driver.close();
 
     }

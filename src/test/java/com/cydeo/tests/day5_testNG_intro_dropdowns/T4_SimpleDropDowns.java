@@ -43,6 +43,7 @@ public class T4_SimpleDropDowns {
         Assert.assertEquals(actualSimpleDropdownText, expectedSimpleDropdownText);
 
 
+
         //4. Verify “State selection” default selected value is correct
         Select stateDropdown = new Select(driver.findElement(By.xpath("//select[@id='state']")));
 
@@ -58,6 +59,8 @@ public class T4_SimpleDropDowns {
 
 
 }
+
+
 
 /*
 TC#4: Verifying “Simple dropdown” and “State selection” dropdown
