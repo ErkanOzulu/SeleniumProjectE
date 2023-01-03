@@ -54,6 +54,46 @@ public class T1_Alert_Practices {
         Assert.assertEquals(actualText,expectedText, "Actual result text is not as expected!!!");
 
 
+    }
+    @Test
+    public void alertTest2(){
+
+        //3. Click to “Click for JS Confirm” button
+
+        driver.findElement(By.xpath("//button[.='Click for JS Confirm']")).click();
+
+        //4. Click to OK button from the alert
+
+        Alert alert=driver.switchTo().alert();
+        alert.accept();
+
+        //5. Verify “You clicked: Ok” text is displayed
+
+        WebElement resultText = driver.findElement(By.xpath("//p[.='You clicked: Ok']"));
+
+        Assert.assertEquals(resultText.getText(),"You clicked: Ok");
+
+    }
+
+    @Test
+    public void alertTest3(){
+        //3. Click to “Click for JS Prompt” button
+        WebElement JSPrompt = driver.findElement(By.xpath("//button[@onclick='jsPrompt()']"));
+        JSPrompt.click();
+
+        //4. Send “hello” text to alert
+        Alert alert=driver.switchTo().alert();
+        alert.sendKeys("hello");
+
+
+        //5. Click to OK button from the alert
+        alert.accept();
+        //6. Verify “You entered: hello” text is displayed
+
+        WebElement resultText = driver.findElement(By.xpath("//p[.='You entered: hello']"));
+
+        Assert.assertTrue(resultText.getText().equals("You entered: hello"));
+
 
     }
 
@@ -66,6 +106,19 @@ public class T1_Alert_Practices {
 4. Click to OK button from the alert
 5. Verify “You successfully clicked an alert” text is displayed
 
- */
+TC #2: Confirmation alert practice
+1. Open browser
+2. Go to website: http://practice.cydeo.com/javascript_alerts
+3. Click to “Click for JS Confirm” button
+4. Click to OK button from the alert
+5. Verify “You clicked: Ok” text is displayed
 
+TC #3: Prompt alert practice
+1. Open browser
+2. Go to website: http://practice.cydeo.com/javascript_alerts
+3. Click to “Click for JS Prompt” button
+4. Send “hello” text to alert
+5. Click to OK button from the alert
+6. Verify “You entered: hello” text is displayed
+ */
 
