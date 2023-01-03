@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 public class T6_SelectingDateOnDropdown {
 
-    WebDriver driver;
+    public WebDriver driver;
 
     @BeforeMethod
     public void setupMethod(){
@@ -43,7 +43,7 @@ public class T6_SelectingDateOnDropdown {
 
         //3. Select “December 1st, 1923” and verify it is selected.
 
-        Select yearDropdown=new Select(driver.findElement(By.id("year")));
+        Select yearDropdown=new Select(driver.findElement(By.id("year")));//select[@id='year']
         //Select year using : visible text
 
 
@@ -54,19 +54,19 @@ public class T6_SelectingDateOnDropdown {
         }
         //TODO problem cannot solved
 
-
         //Select month using : value attribute
-        Select monthDropdown=new Select(driver.findElement(By.id("month")));
+        Select monthDropdown=new Select(driver.findElement(By.id("month")));//select[@id='month']
         monthDropdown.selectByValue("11");
 
 
-        //Select day using : index number
-        Select dayDropdown=new Select(driver.findElement(By.id("day")));
-        dayDropdown.selectByIndex(0);
 
+        //Select day using : index number
+        Select dayDropdown=new Select(driver.findElement(By.id("day")));//select[@id='day']
+        dayDropdown.selectByIndex(0);
+        //verify it is selected
         Assert.assertTrue(dayDropdown.getFirstSelectedOption().getText().equals("1"));
         Assert.assertEquals(monthDropdown.getFirstSelectedOption().getText(),"December");
-         Assert.assertEquals(yearDropdown.getFirstSelectedOption().getText(),"1923");
+        Assert.assertEquals(yearDropdown.getFirstSelectedOption().getText(),"1923");
 
     }
 
