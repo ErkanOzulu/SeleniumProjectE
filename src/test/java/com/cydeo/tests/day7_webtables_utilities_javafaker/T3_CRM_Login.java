@@ -1,5 +1,6 @@
 package com.cydeo.tests.day7_webtables_utilities_javafaker;
 
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -33,15 +34,27 @@ public class T3_CRM_Login {
         //3. Enter valid username
         WebElement inputUserName = driver.findElement(By.xpath("//input[@name='USER_LOGIN']"));
 
+        inputUserName.sendKeys("helpdesk1@cybertekschool.com");
+
+        //USERNAME PASSWORD
+        //helpdesk1@cybertekschool.com UserUser
+        //Helpdesk2@cybertekschool.com UserUse
 
         //4. Enter valid password
         WebElement inputPassword = driver.findElement(By.xpath("//input[@name='USER_PASSWORD']"));
+        inputPassword.sendKeys("UserUser");
 
 
         //5. Click to `Log In` button
+        WebElement LoginButton = driver.findElement(By.xpath("//input[@value='Log In']"));
+        LoginButton.click();
+
+
+
         //6. Verify title is as expected:
         //Expected: Portal
 
+        BrowserUtils.verifyTitle(driver,"Portal");
     }
 
 
