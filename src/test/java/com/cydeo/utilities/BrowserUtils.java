@@ -32,6 +32,7 @@ public class BrowserUtils {
      This method accepts 3 arguments.
     • Arg1: WebDriver
     • Arg2: String expectedInUrl : for verify if the url contains given String.
+        -If conditions matches, will break loop
     • Arg3: String expectedTitle : to be compared against actualTitle
 
      */
@@ -56,11 +57,12 @@ public class BrowserUtils {
         Assert.assertTrue(actualTitle.contains(expectedInTitle));
     }
 
+
+
     /*
     This method accepts a String "expectedTitle" and Asserts if it is true
 
      */
-
 
     public static void verifyTitle(WebDriver driver, String expectedTitle){
 
