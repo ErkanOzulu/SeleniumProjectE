@@ -37,14 +37,14 @@ public class T1_StaleElementReferenceException {
 
 
 
-        try {
-            System.out.println("deleteButton.isDisplayed() = " + deleteButton.isDisplayed());
+  try {
+      System.out.println("deleteButton.isDisplayed() = " + deleteButton.isDisplayed());
 
-        } catch (StaleElementReferenceException e) {
-            System.out.println("-->StaleElementReferenceException is thrown");
-            System.out.println("-->This means the web element is completely deleted from the page");
-            System.out.println("deleteButton.isDisplayed() = false");
-        }
+  } catch (StaleElementReferenceException e) {
+      System.out.println("-->StaleElementReferenceException is thrown");
+      System.out.println("-->This means the web element is completely deleted from the page");
+      System.out.println("deleteButton.isDisplayed() = false");
+  }
 
 
         driver.close();
