@@ -46,18 +46,18 @@ public class T6_SelectingDateOnDropdown {
         Select yearDropdown=new Select(driver.findElement(By.id("year")));//select[@id='year']
         //Select year using : visible text
 
-
         try {
             yearDropdown.selectByVisibleText("1923");
         } catch (NoSuchElementException e) {
-           e.getStackTrace();
+            e.printStackTrace();
         }
         //TODO problem cannot solved
+
+
 
         //Select month using : value attribute
         Select monthDropdown=new Select(driver.findElement(By.id("month")));//select[@id='month']
         monthDropdown.selectByValue("11");
-
 
 
         //Select day using : index number
@@ -65,8 +65,12 @@ public class T6_SelectingDateOnDropdown {
         dayDropdown.selectByIndex(0);
         //verify it is selected
         Assert.assertTrue(dayDropdown.getFirstSelectedOption().getText().equals("1"));
+        System.out.println(dayDropdown.getFirstSelectedOption().getText());
+
         Assert.assertEquals(monthDropdown.getFirstSelectedOption().getText(),"December");
-        Assert.assertEquals(yearDropdown.getFirstSelectedOption().getText(),"1923");
+        System.out.println(monthDropdown.getFirstSelectedOption().getText());
+        Assert.assertEquals(yearDropdown.getFirstSelectedOption().getText(),"1923","No year 1923 in the year dropdown");
+        System.out.println(yearDropdown.getFirstSelectedOption().getText());
 
     }
 
