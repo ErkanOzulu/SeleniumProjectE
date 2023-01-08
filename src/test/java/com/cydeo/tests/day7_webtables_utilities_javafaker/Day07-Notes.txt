@@ -247,7 +247,7 @@ ex:    //option[@value='3']
     </select>
 
 
-//option[@value='3']/preceding-sibling::option[1] --> this will point to Orange 1
+//option[@value='3']/preceding-sibling::option[1] --> this will point to Orange 2
 
 //option[@value='3']/following-sibling::option[2] --> this will point to Orange 5
 

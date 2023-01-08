@@ -29,6 +29,7 @@ public class T1_WindowHandling {
 //2. Go to : https://www.amazon.com
         driver.get("https://www.amazon.com");
 
+
 //3. Copy paste the lines from below into your class
         ((JavascriptExecutor) driver).executeScript("window.open('https://google.com','_blank');");
         ((JavascriptExecutor) driver).executeScript("window.open('https://etsy.com','_blank');");
