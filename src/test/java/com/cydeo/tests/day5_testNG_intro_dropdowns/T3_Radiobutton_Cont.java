@@ -20,6 +20,7 @@ public class T3_Radiobutton_Cont {
         //Locate name='sports' radio buttons and store them in a list of Web Element
         List<WebElement> sportRadioButtons = driver.findElements(By.name("sport"));
 
+
         //Loop through the List of WebElement and select matching result "hockey"
 
         for (WebElement each : sportRadioButtons) {

@@ -18,6 +18,8 @@ public class T3_RadioButtonWithMethod {
         driver.get("https://practice.cydeo.com/radio_buttons");
 
         //Locate name='value' radio buttons and store them in a list of Web Element
+
+
         clickAndVerifyRadioButton(driver, "sport", "hockey");
         clickAndVerifyRadioButton(driver, "sport", "football");
         clickAndVerifyRadioButton(driver, "color", "yellow");
@@ -25,9 +27,8 @@ public class T3_RadioButtonWithMethod {
 
 
 
-
-
     }
+
 
     private static void clickAndVerifyRadioButton(WebDriver driver, String nameAttribute, String idValue) {
 
@@ -40,6 +41,7 @@ public class T3_RadioButtonWithMethod {
             String eachId=each.getAttribute("id");
 
 
+
             if (eachId.equals(idValue)){
                 each.click();
                 System.out.println(eachId+" is selected:"+each.isSelected());
@@ -48,11 +50,22 @@ public class T3_RadioButtonWithMethod {
             }
         }
 
+
+
     }
 
 
 }
-
+//Method name: clickAndVerifyRadioButton
+//Return type: void or boolean
+//Method args:
+//1. WebDriver
+//2. Name attribute as String (for providing which group of radio buttons)
+//3. Id attribute as String (for providing which radio button to be clicked)
+//Method should loop through the given group of radio buttons. When it finds the
+//matching option, it should click and verify option is Selected.
+//Print out verification: true
+// */
 
 
 
