@@ -31,7 +31,7 @@ public class T6_SelectingDateOnDropdown {
 
     @AfterMethod
     public void tearDownMethod(){
-        driver.close();
+       driver.close();
 
     }
 
@@ -39,26 +39,30 @@ public class T6_SelectingDateOnDropdown {
 
 
     @Test
-    public void selectingDateOnDropdown()  {
+    public void selectingDateOnDropdown() throws InterruptedException {
 
         //3. Select “December 1st, 1923” and verify it is selected.
 
         Select yearDropdown=new Select(driver.findElement(By.id("year")));//select[@id='year']
         //Select year using : visible text
 
+
+
         try {
             yearDropdown.selectByVisibleText("1923");
         } catch (NoSuchElementException e) {
             e.printStackTrace();
+            //yearDropdown.selectByVisibleText("1924");
         }
         //TODO problem cannot solved
+
+        Thread.sleep(3000);
 
 
 
         //Select month using : value attribute
         Select monthDropdown=new Select(driver.findElement(By.id("month")));//select[@id='month']
         monthDropdown.selectByValue("11");
-
 
         //Select day using : index number
         Select dayDropdown=new Select(driver.findElement(By.id("day")));//select[@id='day']
