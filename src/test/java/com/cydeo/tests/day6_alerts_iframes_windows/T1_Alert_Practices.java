@@ -26,6 +26,7 @@ public class T1_Alert_Practices {
         //2. Go to website: http://practice.cydeo.com/javascript_alerts
         driver.get("http://practice.cydeo.com/javascript_alerts");
 
+
     }
     @AfterMethod
     public void tearDown(){
