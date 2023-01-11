@@ -1,4 +1,4 @@
-package com.cydeo.tests.day6_alerts_iframes_windows;
+package com.cydeo.tests.day7_webtables_utilities_javafaker;
 
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
@@ -21,7 +21,7 @@ public class Booking {
         driver= WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        //2. Go to website: http://practice.cydeo.com/javascript_alerts
+
 
 
 
@@ -31,7 +31,13 @@ public class Booking {
         driver.get("https://booking.com");
 
         //Clicking on the image
+
         driver.findElement(By.xpath("//div[@aria-label ='Find homes for your next trip']")).click();
+
+
+
+
+
 
         //Get the handles of all the windows that are currently open using the command:
         Set<String> allWindowHandles = driver.getWindowHandles(); //which returns the set of handles.
