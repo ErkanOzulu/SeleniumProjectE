@@ -32,15 +32,40 @@ public class BookingE {
         //2-Click to this image
         Thread.sleep(3000);
 
+        /*
+        boolean displayed = false;
+        do {
+
 
         try {
-          driver.findElement(By.xpath("//div[@class='bh-awareness-campaign-index-banner__image-container']")).click();
+            WebElement element = driver.findElement(By.xpath("//div[@class='bh-awareness-campaign-index-banner__image-container']"));
+             displayed = element.isDisplayed();
+                 element.click();
 
         } catch (NoSuchElementException e) {
 
-            driver.get("https://booking.com");
+            //driver.get("https://booking.com");
             driver.findElement(By.xpath("//div[@class='bh-awareness-campaign-index-banner__image-container']")).click();
         }
+
+    }while (!displayed);
+
+         */
+
+        WebElement picture;
+        //do{
+            //driver.navigate().refresh();
+            try {
+                picture = driver.findElement(By.xpath("//a[@class='bh-awareness-campaign-index-banner__link bui-banner']"));
+                System.out.println("try executed");
+                picture.click();
+            } catch (NoSuchElementException e) {
+                picture = driver.findElement(By.xpath("//a[@class='fc63351294 b8e920e088']"));
+                System.out.println("catch executed");
+                picture.click();
+            } //}while (!picture.isDisplayed());
+
+
 
 
 
