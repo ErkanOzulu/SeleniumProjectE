@@ -62,6 +62,20 @@ WebDriver driver;
 
         searchBox.click();
 
+        driver.findElement(By.xpath("(//div[.='t shirts'])[2]")).click();
+        /*
+        I used dev tool to pause elements in html and then located element
+
+        -->>There are three ways to pause elements
+            1 - go console and write -->> setTimeout('debugger',3000) <<---for 3 seconds
+            2- go source and use "debugger paused"
+            3- go source and scroll down and find event Listener Breakpoint and select one of them for ex. "Keyboard --->>keyup" -- whenever you click keyup in the keyboard it will be paused.
+
+         */
+
+
+
+/*
 
         Thread.sleep(3000);
 
@@ -74,6 +88,10 @@ WebDriver driver;
             driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[1]/div[1]/div[2]/div[2]/form/ul/li[4]/div/a")).click();
 
         }
+
+
+
+ */
 
 
             Thread.sleep(5000);
