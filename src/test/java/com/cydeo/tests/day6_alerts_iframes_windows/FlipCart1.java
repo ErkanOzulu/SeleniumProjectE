@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -40,9 +41,13 @@ WebDriver driver;
         Actions actions = new Actions(driver);
         actions.moveToElement(electronics).pause(2000).perform();
 
-        WebElement audio = driver.findElement(By.xpath("//div[@class='eFQ30H'][4]//div[@class='_1psGvi SLyWEo']/div[2]/div[2]/div/div/div[2]/a[3]"));
+        //div[@class='eFQ30H'][4]//div[@class='_1psGvi SLyWEo']/div[2]/div[2]/div/div/div[2]/a[3]
+
+     WebElement audio = driver.findElement(By.xpath("//div[@class='eFQ30H'][4]//div[@class='_1psGvi SLyWEo']/div[2]/div[2]/div/div/div[2]/a[3]"));
         audio.click();
         System.out.println(driver.getTitle());
+        Assert.assertTrue(driver.getTitle().contains("Headphones"));
+
         //  WebElement audio = driver.findElement(By.xpath("//div[@class='eFQ30H'][4]//div[2]//div[2]//div[2]//div//div//div[1]//a[1]"));
         //System.out.println(audio.getText());
 //div[@class='eFQ30H'][4]/a/div[3]/div[2]/div/div/div/a
@@ -70,12 +75,11 @@ WebDriver driver;
 
         }
 
-/*
-        Thread.sleep(5000);
-        System.out.println(driver.getTitle());
-        Assert.assertTrue(driver.getTitle().contains("T Shirts"));
 
- */
+            Thread.sleep(5000);
+
+
+        Assert.assertTrue(driver.getTitle().contains("T Shirts"));
 
         //ul[@class='col-12-12 _1MRYA1']//li[.='t shirts']/div/a
         //ul[@class='col-12-12 _1MRYA1']/li[4]
