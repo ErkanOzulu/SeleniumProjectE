@@ -36,16 +36,18 @@ public class T4_Config_Practice {
     public void google_search_test() {
         //3- Write “apple” in search box
         WebElement googleSearch = driver.findElement(By.xpath("//input[@name='q']"));
-        googleSearch.sendKeys("apple" + Keys.ENTER);
+        googleSearch.sendKeys(ConfigurationReader.getProperty("searchValue")+ Keys.ENTER);
 
 
         //4- Verify title:
         //Expected: apple - Google Search
 
-        String expectedTitle = "apple - Google Search";
+        String expectedTitle = ConfigurationReader.getProperty("searchValue") +" - Google'da Ara";
         String actualTitle = driver.getTitle();
 
         Assert.assertEquals(expectedTitle, actualTitle);
+
+        //TODO "he said you can add your resume-how can you crate your framework- using this configuration properties
     }
 }
 /*
