@@ -19,10 +19,11 @@ public class Discord_MultipleWindows {
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.get("https://practice.cydeo.com/windows");
     }
     @Test
     public void multipleWindows(){
-        driver.get("https://practice.cydeo.com/windows");
+
 
         //Locating CLICK HERE link
         WebElement clickHere = driver.findElement(By.xpath("//a[@href='/windows/new']"));

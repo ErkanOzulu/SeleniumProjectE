@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public abstract class TestBase {
 
-    public WebDriver driver;
+  public WebDriver driver;
 
 
 
@@ -26,6 +26,8 @@ public abstract class TestBase {
     public void tearDown(){
         driver.quit();
     }
+
+
 
 
 
