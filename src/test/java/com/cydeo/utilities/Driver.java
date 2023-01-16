@@ -62,11 +62,19 @@ public class Driver {
         return driver;
     }
 
-    public void quitDriver(){
-       driver.quit();
+    public static void quitDriver(){
+       if(driver!=null){
+           driver.quit();
+           driver=null;
+       }
+
     }
-    public void closeDriver(){
-        driver.close();
+    public static void closeDriver(){
+        if(driver!=null){
+            driver.close();
+            driver=null;
+        }
+
     }
 
 
