@@ -20,8 +20,8 @@ public class T2_upload_Practice {
 
 
         //3. Upload the file.
-        WebElement fileUpload = Driver.getDriver().findElement(By.id("file-upload"));//for choose file and click chosen file
-        fileUpload.sendKeys(path);//important point we only send path of the file.We don't click choose file
+        WebElement fileUpload = Driver.getDriver().findElement(By.id("file-upload"));//instead of choosing a file and clicking the chosen file
+        fileUpload.sendKeys(path);//important point is we only send path of the file.We don't click choose file
 
 
         WebElement uploadButton = Driver.getDriver().findElement(By.id("file-submit"));
