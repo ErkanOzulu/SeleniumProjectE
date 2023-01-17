@@ -79,7 +79,8 @@ Driver Utility Review:
 - Singleton Design Pattern:
 - Singleton Design Pattern makes sure we are returning the same instance every time we call our method.
 - In our case we are trying to return the same instance of DRIVER
-
+This website has good information about singleton pattern design
+//https://metinalniacik.medium.com/singleton-design-pattern-tasar%C4%B1m-%C3%B6r%C3%BCnt%C3%BCs%C3%BC-b7221929dc26
 --------------------------------------------------------------------------------
 
 How do we implement the Singleton Design Pattern?
