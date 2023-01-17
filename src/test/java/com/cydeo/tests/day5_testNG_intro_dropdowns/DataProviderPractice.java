@@ -15,6 +15,7 @@ public class DataProviderPractice {
         Driver.getDriver().get("https://google.com");
         Driver.getDriver().findElement(By.name("q")).sendKeys(keyword+ Keys.ENTER);
         Assert.assertEquals(Driver.getDriver().getTitle(),expected);
+        Driver.quitDriver();
 
 
     }
