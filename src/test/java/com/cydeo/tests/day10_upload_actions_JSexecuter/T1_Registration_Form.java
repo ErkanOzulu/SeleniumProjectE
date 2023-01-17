@@ -20,7 +20,7 @@ public class T1_Registration_Form {
         //1. Open browser
         //2. Go to website: https://practice.cydeo.com/registration_form
         //Driver.getDriver() --> driver
-        Driver.getDriver().get(ConfigurationReader.getProperty("registration.form.url"));
+       Driver.getDriver().get(ConfigurationReader.getProperty("registration.form.url"));
 
         //Create JavaFaker object
         Faker faker = new Faker();
