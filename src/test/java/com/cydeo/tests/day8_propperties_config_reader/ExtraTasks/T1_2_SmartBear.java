@@ -25,6 +25,8 @@ public class T1_2_SmartBear {
         //2. Go to website:
         //http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx
         driver = WebDriverFactory.getDriver("chrome");
+
+
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
