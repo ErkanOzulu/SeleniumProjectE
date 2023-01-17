@@ -6,6 +6,7 @@ import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class T1_Registration_Form {
@@ -67,10 +68,17 @@ public class T1_Registration_Form {
         Select departmentDropdown = new Select(Driver.getDriver().findElement(By.xpath("//select[@name='department']")));
         departmentDropdown.selectByIndex(faker.number().numberBetween(1,9));
         //12.Select Job Title
+        Select jobTitleDropdown=new Select(Driver.getDriver().findElement(By.xpath("//select[@name='job_title']")));
+        jobTitleDropdown.selectByVisibleText("SDET");
         //13.Select programming language from checkboxes
+        Driver.getDriver().findElement(By.xpath("//input[@value='java']")).click();
         //14.Click to sign up button
-        //15.Verify success message “You’ve successfully completed registration.” is
-        //displayed.
+        Driver.getDriver().findElement(By.xpath("//button[@id='wooden_spoon']")).click();
+
+        //15.Verify success message “You’ve successfully completed registration.” is displayed.
+        Assert.assertTrue(Driver.getDriver().findElement(By.xpath("//p")).isDisplayed());
+
+        Driver.getDriver().quit();
         //Note:
         //1. Use new Driver utility class and method
         //2. User JavaFaker when possible
