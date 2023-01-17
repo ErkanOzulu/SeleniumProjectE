@@ -7,7 +7,10 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class SmartBearUtils {
+public  class SmartBearUtils {
+    public static WebDriver driver;
+
+
     @Test
     public void smart(){
         //I used a method called loginToSmartBear to open to website
@@ -15,7 +18,7 @@ public class SmartBearUtils {
     }
     public static void loginToSmartBear(String WebDriverType) {
 
-        WebDriver driver = WebDriverFactory.getDriver(WebDriverType);
+        driver = WebDriverFactory.getDriver(WebDriverType);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://secure.smartbearsoftware.com/samples/testcomplete12/WebOrders/login.aspx");
