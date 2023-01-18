@@ -51,10 +51,12 @@ public class WebDriverFactory {
                 driver=null;
         }
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         return driver;
     }
 
 
  */
+
 }
