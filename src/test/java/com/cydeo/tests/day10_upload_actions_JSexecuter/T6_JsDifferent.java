@@ -27,7 +27,8 @@ public class T6_JsDifferent {
             BrowserUtils.sleep(1);
             js.executeScript("window.scrollBy(0,-750)");
         }
-       js.executeScript("arguments[0].scrollIntoView(true);"+"arguments[0].click()",home);
+
+      js.executeScript("arguments[0].scrollIntoView(true);"+"arguments[0].click()",home);
 
     }
 
