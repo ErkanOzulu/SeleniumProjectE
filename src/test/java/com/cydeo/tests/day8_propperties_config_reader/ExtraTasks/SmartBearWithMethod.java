@@ -1,19 +1,24 @@
 package com.cydeo.tests.day8_propperties_config_reader.ExtraTasks;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static com.cydeo.tests.day8_propperties_config_reader.ExtraTasks.SmartBearUtils.driver;
 
 public class SmartBearWithMethod {
+
+
 
     @Test
     public void autoLogin(){
 
-     SmartBearUtils.loginToSmartBear("chrome");
+        WebDriver driver= SmartBearUtils.loginToSmartBear("chrome");
+
+
 
         //2. Click on View all orders
+
 
         driver.findElement(By.xpath("//a[.='View all orders']")).click();
 
