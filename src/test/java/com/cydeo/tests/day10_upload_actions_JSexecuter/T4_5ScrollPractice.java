@@ -3,6 +3,7 @@ package com.cydeo.tests.day10_upload_actions_JSexecuter;
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
@@ -32,7 +33,7 @@ public class T4_5ScrollPractice {
        //actions.sendKeys(Keys.PAGE_UP).build().perform();
         //actions.sendKeys(Keys.HOME).perform();
 
-
+        actions.sendKeys(Keys.PAGE_UP,Keys.PAGE_UP).perform();
 
 
 
