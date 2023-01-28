@@ -22,7 +22,7 @@ public class Task_TODO {
         //select Polymer link
         driver.findElement(By.xpath("//a[contains(@href,'polymer/')]")).click();
 
-        //2. Add to Todo items
+        //2. Add to To-do items
 
 
         WebElement input=driver.findElement(By.xpath("//input[@id='new-todo']"));
@@ -31,16 +31,52 @@ public class Task_TODO {
 
         input.sendKeys("SecondToDoItem"+Keys.ENTER);
 
-        //3. Edit the content of the second Todo item
+        //3. Edit the content of the second To-do item
 
         Actions actions=new Actions(driver);
         WebElement secondLebel = driver.findElement(By.xpath("//label[.='SecondToDoItem']"));
 
+        actions.moveToElement(secondLebel).doubleClick().doubleClick().sendKeys("editing second.."+Keys.ENTER).perform();
 
-        actions.moveToElement(secondLebel).doubleClick().doubleClick().sendKeys("editing secondToDoItem"+Keys.ENTER).perform();
+    }
+
+    @Test
+    public void test2(){ //applied second way
+
+        //1-  go to "http://todomvc.com/
+
+        WebDriver driver= Driver.getDriver();
+        driver.get("http://todomvc.com/");
+
+        //click within the JavaScript tab
+        driver.findElement(By.xpath("//paper-tab[@data-target='js']")).click();
+        //select Polymer link
+        driver.findElement(By.xpath("//a[contains(@href,'polymer/')]")).click();
+
+        //2. Add to To-do items
+
+
+        WebElement input=driver.findElement(By.xpath("//input[@id='new-todo']"));
+
+        input.sendKeys("FirstToDoItem"+ Keys.ENTER);
+
+        input.sendKeys("SecondToDoItem"+Keys.ENTER);
+
+        //3. Edit the content of the second To-do item
+
+        Actions actions=new Actions(driver);
+        WebElement secondLebel = driver.findElement(By.xpath("//label[.='SecondToDoItem']"));
+
+        actions.doubleClick(secondLebel).perform();
+
+        WebElement edit=driver.findElement(By.id("edit"));
+        edit.sendKeys(Keys.chord(Keys.CONTROL,"a")+Keys.BACK_SPACE+"editing second..."+Keys.ENTER);
+
 
 
 
     }
+
+
 }
 
