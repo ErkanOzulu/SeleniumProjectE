@@ -14,7 +14,7 @@ public class HM3_BackAndForth {
 
         driver.get("https://google.com");
         WebElement gmailTRight = driver.findElement(By.linkText("Gmail"));
-        //WebElement gmailTRight = driver.findElement(By.className("gb_j"));
+       // WebElement gmailTRight = driver.findElement(By.className("gb_n"));
 
         gmailTRight.click();
         String actualTitle = driver.getTitle();
