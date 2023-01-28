@@ -33,6 +33,7 @@ public class T6_staleElementReferenceException {
 
         System.out.println("cydeoLink.isSelected() = " + cydeoLink.isDisplayed());
 
+        //todo how to handle taleElementReferenceException
     }
 }
 /*TC #6: StaleElementReferenceException Task
