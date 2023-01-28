@@ -28,7 +28,10 @@ public class T7_Scroll_JSExecutor {
 
         //js.executeScript("arguments[1].scrollIntoView(true)",cydeoLink,homeLink);
 
-     js.executeScript("arguments[0].scrollIntoView(true)",homeLink);
+        js.executeScript("arguments[0].scrollIntoView(true)",homeLink);
+
+        //click part important
+        js.executeScript("arguments[0].scrollIntoView(true);"+"arguments[0].click()",cydeoLink);
 
         //objects
         //cydeoLink 0
