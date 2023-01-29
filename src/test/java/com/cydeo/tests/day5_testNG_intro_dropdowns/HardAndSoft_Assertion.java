@@ -28,6 +28,7 @@ public class HardAndSoft_Assertion {
        softAssert.assertTrue("orange".equals("oranger"));
        System.out.println("After assertion failed");
        softAssert.assertAll();// if we write this line, it shows us the "The following asserts failed:
+
        //expected [app] but found [apple]
        //expected [true] but found [false]
 
