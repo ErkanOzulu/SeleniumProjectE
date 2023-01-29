@@ -31,7 +31,7 @@ public class HardAndSoft_Assertion {
        //expected [app] but found [apple]
        //expected [true] but found [false]
 
-
+        //todo I think SoftAssertion is important
 
 
    }
