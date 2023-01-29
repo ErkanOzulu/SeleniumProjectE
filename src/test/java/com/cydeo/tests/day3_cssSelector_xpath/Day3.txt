@@ -195,7 +195,7 @@ syntax: driver.findElement(By.name("uh68")).getAttribute("id")         --> bb22
     - we can use any custom attribute we see on a web element
 
     syntax#1: tagName[attribute='value'] 
-    syntax#1: tagName[attribute="value"] 
+
 
 ex:    <label class="login-item-checkbox-label" for="USER_REMEMBER">Remember me on this computer</label>
 
