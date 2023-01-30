@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -70,6 +71,8 @@ public class BookingE {
 
 
         Set<String> allWindowHandles = driver.getWindowHandles();
+
+            /*
         for (String eachHandle : allWindowHandles) {
             driver.switchTo().window(eachHandle);
 
@@ -78,6 +81,13 @@ public class BookingE {
            }
 
         }
+
+             */
+
+        Iterator it=allWindowHandles.iterator();
+        String parent =(String) it.next();
+        String child=(String)it.next();
+        driver.switchTo().window(child);
 
         //3- Add your destination country ex: Egypt
         WebElement destinationInput = driver.findElement(By.xpath("//input[@aria-label='Type your destination']"));
@@ -100,10 +110,27 @@ public class BookingE {
         //Egypt: 5,034 properties found
 
 
-        WebElement headResult = driver.findElement(By.xpath("//h1[@class='e1f827110f d3a14d00da']"));
+        WebElement headResult = driver.findElement(By.xpath("//h1[contains(@class,'e1f827110f')]"));
 
         String actualResult=headResult.getText();
         String expectedResult="Egypt: 5,034 properties found";
+        char[] chars = actualResult.toCharArray();
+
+        String  textNumber="";
+
+        for (char each : chars) {
+            if (Character.isDigit(each)){
+                textNumber+=each;
+
+            }
+        }
+        int number=Integer.parseInt(textNumber);
+
+
+        System.out.println(number);
+        int difference=number-5034;
+        System.out.println(difference);
+        driver.switchTo().window(parent);
 
         Assert.assertEquals(actualResult,expectedResult);
 

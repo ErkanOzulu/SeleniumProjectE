@@ -34,11 +34,6 @@ public class Booking {
 
         driver.findElement(By.xpath("//div[@aria-label ='Find homes for your next trip']")).click();
 
-
-
-
-
-
         //Get the handles of all the windows that are currently open using the command:
         Set<String> allWindowHandles = driver.getWindowHandles(); //which returns the set of handles.
 
@@ -62,13 +57,14 @@ public class Booking {
         driver.findElement(By.xpath("//button[@data-sb-id='main']")).click();
 
         //
-        String foundText = driver.findElement(By.xpath("//h1[@class='e1f827110f d3a14d00da']")).getText();
-        String actualText = "Egypt: 5,034 properties found";
-        Assert.assertEquals(foundText, actualText);
+        String actualText = driver.findElement(By.xpath("//h1[contains(@class,'e1f827110f')]")).getText();
+        System.out.println(actualText);
+        String expectedText = "Egypt: 5,034 properties found";
+
         char[] ch = actualText.toCharArray();
 
         String gettingNumberFromTheText = "";
-        for (int i = 0; i < foundText.length(); i++) {
+        for (int i = 0; i < actualText.length(); i++) {
             if (Character.isDigit(ch[i])) {
                 gettingNumberFromTheText += ch[i];
             }
@@ -77,8 +73,11 @@ public class Booking {
 
         int difference = Integer.parseInt(gettingNumberFromTheText) -5034;
         System.out.println("difference = " + difference);
+
         //Go back to previous window
         driver.switchTo().window(parentID);
+        Assert.assertEquals(actualText,expectedText);
+
     }
 
 }
