@@ -2,6 +2,7 @@ package com.cydeo.tests.day7_webtables_utilities_javafaker;
 
 import com.cydeo.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -9,7 +10,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.Iterator;
-import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -66,7 +66,7 @@ public class BookingE {
                 picture.click();
             } //}while (!picture.isDisplayed());
 
-
+//driver.findElement(By.xpath("//div[@data-qmab-component-id='19']")).click(); also this works
 
 
 
