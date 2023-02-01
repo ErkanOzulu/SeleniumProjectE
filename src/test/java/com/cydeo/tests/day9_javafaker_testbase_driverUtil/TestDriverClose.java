@@ -21,6 +21,8 @@ public class TestDriverClose {
 
         Assert.assertTrue(Driver.getDriver().getTitle().contains("Tesla"));
 
+        Driver.closeDriver();
+
 
     }
 }
