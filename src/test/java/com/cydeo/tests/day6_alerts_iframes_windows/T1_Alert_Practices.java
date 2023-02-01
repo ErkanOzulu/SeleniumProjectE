@@ -92,6 +92,8 @@ public class T1_Alert_Practices {
         Alert alert=driver.switchTo().alert();
         alert.sendKeys("hello");
 
+        //  alert.sendKeys("User"+ Keys.TAB); if there is two input box you can use for passing the other
+
 
         //5. Click to OK button from the alert
         alert.accept();
