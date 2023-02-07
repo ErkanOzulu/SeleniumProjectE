@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.util.Set;
-import java.util.concurrent.TimeUnit;
 
 /*
 In this class only general utility methods that are NOT related to some specific page.
@@ -75,7 +74,7 @@ public class BrowserUtils {
 
     public static void waitForInvisibtyOf(WebElement webElement){
 
-        Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+        //Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
         wait.until(ExpectedConditions.invisibilityOf(webElement));
 

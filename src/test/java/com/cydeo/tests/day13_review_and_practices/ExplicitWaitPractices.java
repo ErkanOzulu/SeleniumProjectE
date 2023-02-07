@@ -39,7 +39,6 @@ public class ExplicitWaitPractices {
 //        wait.until(ExpectedConditions.invisibilityOf(dynamicControlsPage.loadingBar));
         BrowserUtils.waitForInvisibtyOf(dynamicControlsPage.loadingBar);
 
-        Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         //5- Verify:
         // a. Checkbox is not displayed
@@ -47,6 +46,7 @@ public class ExplicitWaitPractices {
         try {
 
             //assertFalse method will pass the test if the boolean value returned is: false
+            Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
             Assert.assertTrue(!dynamicControlsPage.checkBox.isDisplayed());
             Assert.assertFalse(dynamicControlsPage.checkBox.isDisplayed());
 
@@ -61,9 +61,44 @@ public class ExplicitWaitPractices {
         Assert.assertTrue(dynamicControlsPage.message.isDisplayed());
 
         Assert.assertTrue(dynamicControlsPage.message.getText().equals("It's gone!"));
+        Driver.closeDriver();
 
 
         //NOTE: FOLLOW POM
+
+    }
+
+    @Test
+    public void enabled_button_test(){
+
+//TC #3: Explicit wait practice
+
+//3- Click to “Enable” button
+
+
+        dynamicControlsPage.enableButton.click();
+
+        System.out.println("dynamicControlsPage.inputBox.isEnabled() = " + dynamicControlsPage.inputBox.isEnabled());
+
+//4- Wait until “loading bar disappears”
+
+        //Calling our ExplicitWait utility method to wait loadingBar to disappear
+        BrowserUtils.waitForInvisibtyOf(dynamicControlsPage.loadingBar);
+
+        System.out.println("dynamicControlsPage.inputBox.isEnabled() = " + dynamicControlsPage.inputBox.isEnabled());
+
+//5- Verify:
+//a. Input box is enabled.
+
+        Assert.assertTrue(dynamicControlsPage.inputBox.isEnabled());
+//b. “It’s enabled!” message is displayed.
+        Assert.assertTrue(dynamicControlsPage.message.isDisplayed());
+
+        //Check the String value is matching as expected:"It's enabled!"
+        Assert.assertTrue(dynamicControlsPage.message.getText().equals("It's enabled!"));
+
+//NOTE: FOLLOW POM
+
 
     }
 
