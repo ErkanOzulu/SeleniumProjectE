@@ -10,6 +10,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class WebDriveWaitPractices {
+
+
+  //TC#4 : Dynamically Loaded Page Elements 7
+
     @Test
     public void dynamic_load_7_test(){
         //1. Go to https://practice.cydeo.com/dynamic_loading/7

@@ -72,7 +72,7 @@ Page Object Model Design Pattern (POM)
 
     - PageFactory.initElements(driver, this);
     - This method basically initializes the driver instance and the object of the class.
-    - After this line we will be able to use THE OBJECT of the class, to reach the avaiable web elements. 
+    - After this line we will be able to use THE OBJECT of the class, to reach the available web elements.
 
 #2- Instead of using .findElement method we will use @FindBy annotation
 
@@ -86,7 +86,7 @@ regular email format :
 
 - How it works?
     - Every time we want to use WebElement located using @FindBy annotation, it will be re-located in the line we are using it.
-    - Basically it will automatically do a "fressness check" which will eliminate the StaleElementReferenceException
+    - Basically it will automatically do a "freshness check" which will eliminate the StaleElementReferenceException
 
  - it is different from pom.xml file
      - pom.xml is short for "project object model".
