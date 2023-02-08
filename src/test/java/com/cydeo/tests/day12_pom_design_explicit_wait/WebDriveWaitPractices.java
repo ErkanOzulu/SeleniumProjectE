@@ -48,6 +48,9 @@ public class WebDriveWaitPractices {
 
         WebDriverWait wait=new WebDriverWait(Driver.getDriver(),10);
 
+        WebDriverWait wait1=new WebDriverWait(Driver.getDriver(),10);
+
+
         //2. Click to start
         dynamicLoad1Page.startButton.click();
         //3. Wait until loading bar disappears
