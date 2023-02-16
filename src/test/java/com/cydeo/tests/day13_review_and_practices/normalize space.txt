@@ -1,0 +1,51 @@
+//tagname[@attribute='value']
+//tagname[function()='value']
+//tagname[normalize-space(arg)='value']
+//tagname[contains(arg,'value')]
+
+
+//tagname[contains(normalize-space(@id),'has random space)']
+//label[normalize-space(@id)='has random spaces']
+
+//tagname[normalize-space(text())='text']
+
+
+XPath normalize-space text example
+
+html code
+<label>    who cares         about spaces   </label>
+
+xpath
+//label[normalize-space(text())='who cares about spaces']
+normalize space in XPath example
+normalize-space('query')	-->	query
+normalize-space(' query ')	-->	query
+normalize-space('xml query')	-->	xml query
+normalize-space('xml       query')	-->	xml query
+normalize-space('xml
+					query')	-->	xml query
+normalize-space('')	-->	zero-length string
+normalize-space('   ')	-->	zero-length string
+normalize-space(())	-->	zero-length string
+normalize-space(      query  )	-->	query
+XPath normalize-space attribute
+So far we have seen how to use the normalize space with text, normalize-space can also work with an attribute that has spaces and newlines
+
+html code
+<label id='has    random   spaces       '>text </label>
+
+xpath
+//label[normalize-space(@id)='has random spaces']
+XPath normalize space contains
+We can also match the partial match using the normalize-space with contains() function present in the XPath. Rewriting the above example using contains with normalize-space
+
+html code
+<label id='has    random   spaces       '>text </label>
+
+xpath
+//label[contains(normalize-space(@id),'has random')]
+
+
+https://chercher.tech/java/normalize-space-xpath
+
+http://makeseleniumeasy.com/2018/09/30/advanced-xpath-concept-method-normalize-space-its-usage/

@@ -1,0 +1,6 @@
+//select[@id='month']/option[last()]
+
+//parent/child[last()]--->> always locates last element
+
+=============================================================
+
