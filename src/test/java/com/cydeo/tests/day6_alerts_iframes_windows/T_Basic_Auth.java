@@ -11,9 +11,13 @@ public class T_Basic_Auth {
     public void test() {
 
         WebDriver driver = Driver.getDriver();
+        //driver.get("https://<username>:<password>@www.example.com/index.html")
+
+        //admin:admin@
 
         driver.get("https://admin:admin@the-internet.herokuapp.com/basic_auth");
         driver.findElement(By.linkText("Basic Auth")).click();
+
 
         //todo
 
