@@ -12,7 +12,7 @@ public class DynamicControlsPage {
 
         PageFactory.initElements(Driver.getDriver(),this);
     }
-
+    //Page Factory-OR(Object Repository)
    // @FindBy(xpath = "//button[.='Remove']")
     @FindBy(css="form#checkbox-example>button")
     public WebElement removeButton;
