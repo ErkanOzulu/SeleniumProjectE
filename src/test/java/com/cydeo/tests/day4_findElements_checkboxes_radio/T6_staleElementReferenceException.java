@@ -27,13 +27,19 @@ public class T6_staleElementReferenceException {
 
         driver.navigate().refresh();
 
+        //todo to handle staleElementReferenceException
         //We are refreshing the web element reference by re-assigning (re-locating) the web element
         cydeoLink = driver.findElement(By.xpath("//a[@target='_blank']"));
         //5- Verify it is displayed, again.
 
         System.out.println("cydeoLink.isSelected() = " + cydeoLink.isDisplayed());
 
-        //todo how to handle staleElementReferenceException
+
+
+
+
+        //driver.findElement(By.xpath("//a[.='Gmail']"));
+
     }
 }
 /*TC #6: StaleElementReferenceException Task
