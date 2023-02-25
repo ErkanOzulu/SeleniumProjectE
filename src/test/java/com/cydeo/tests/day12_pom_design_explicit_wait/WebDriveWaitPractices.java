@@ -2,7 +2,6 @@ package com.cydeo.tests.day12_pom_design_explicit_wait;
 
 import com.cydeo.pages.DynamicLoad1Page;
 import com.cydeo.pages.DynamicLoad7Page;
-import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -48,8 +47,6 @@ public class WebDriveWaitPractices {
 
         WebDriverWait wait=new WebDriverWait(Driver.getDriver(),10);
 
-        WebDriverWait wait1=new WebDriverWait(Driver.getDriver(),10);
-
 
         //2. Click to start
         dynamicLoad1Page.startButton.click();
@@ -72,7 +69,6 @@ public class WebDriveWaitPractices {
         dynamicLoad1Page.submitButton.click();
         //8. Assert “Your password is invalid!” text is displayed.
 
-        BrowserUtils.sleep(2);
 
         Assert.assertTrue(dynamicLoad1Page.errorMessage.isDisplayed());
         //Note: Follow POM Design Pattern
