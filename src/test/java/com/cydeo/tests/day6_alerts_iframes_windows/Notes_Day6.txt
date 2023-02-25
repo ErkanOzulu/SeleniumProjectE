@@ -46,7 +46,7 @@ Today's schedule:
 - TestNG: 
 
 - What is TestNG?
-- TestNG is a UNIT TESTING FRAMEWORK.
+- TestNG is a UNIT TESTING FRAMEWORK. TestNG is an automation testing framework in which NG stands for “Next Generation”.
 
 - Is this tool created for testers?
 - No. It is created for developers.
