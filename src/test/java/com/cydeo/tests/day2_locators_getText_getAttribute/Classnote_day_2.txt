@@ -119,7 +119,7 @@ Selenium methods:
     syntax: driver.findElement(By.linkText("GOOGLE SEARCH"));
 
 #2- partialLinkText:
-    - linkText locator will look through the TEXTS OF all of the links in the page, and return the PARTIAL matching link.
+    - partiallinkText locator will look through the TEXTS OF all of the links in the page, and return the PARTIAL matching link.
     - It accepts a string as the text of the link we are trying to locate
     - This locator will ONLY ONLY ONLY works on links. <a> tags only.
     - This method looks for PARTIAL text match.
