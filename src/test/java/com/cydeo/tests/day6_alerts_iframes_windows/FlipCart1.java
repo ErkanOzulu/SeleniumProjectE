@@ -68,6 +68,7 @@ WebDriver driver;
 
         -->>There are three ways to pause elements
             1 - go console and write -->> setTimeout('debugger',3000) <<---for 3 seconds
+            or setTimeout(function(){ debugger }, 5000)
             2- go source and use "debugger paused"
             3- go source and scroll down and find event Listener Breakpoint and select one of them for ex. "Keyboard --->>keyup" -- whenever you click keyup in the keyboard it will be paused.
 
