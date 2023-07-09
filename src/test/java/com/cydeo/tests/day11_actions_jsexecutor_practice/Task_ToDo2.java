@@ -26,7 +26,7 @@ public class Task_ToDo2 {
         todoList.sendKeys("List1" + Keys.ENTER);
         todoList.sendKeys("List2" + Keys.ENTER);
 
-        //Locating the second to-do list and storing the length in an int variable
+        //Locating the second to-do list and storing the length of text in it as an int variable
         Actions action = new Actions(Driver.getDriver());
         WebElement secondTodo = Driver.getDriver().findElement(By.xpath("//li[@is='td-item'][2]//label"));
         int secondTodoTextSize = secondTodo.getText().length();
