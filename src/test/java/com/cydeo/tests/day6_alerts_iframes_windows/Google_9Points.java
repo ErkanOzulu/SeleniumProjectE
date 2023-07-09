@@ -14,7 +14,7 @@ public class Google_9Points {
         WebDriver driver = Driver.getDriver();
 
         driver.get("https://google.com");
-        driver.findElement(By.xpath("//a[@class='gb_e']")).click();
+        driver.findElement(By.xpath("//a[@class='gb_d']")).click();
 
 
         WebElement iframe = driver.findElement(By.xpath("//iframe[@role='presentation']"));
@@ -33,10 +33,10 @@ public class Google_9Points {
         WebDriver driver = Driver.getDriver();
 
         driver.get("https://google.com");
-        driver.findElement(By.xpath("//a[@class='gb_e']")).click();
+        driver.findElement(By.xpath("//a[@class='gb_d']")).click();
         driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@role='presentation']")));
 
-        driver.findElement(By.xpath("//ul[@class='LVal7b u4RcUd']//li[14]")).click();
+        driver.findElement(By.xpath("//ul[@class='ngVsM u4RcUd']//li[14]")).click();
 
         driver.switchTo().parentFrame();
         System.out.println(driver.getTitle());
