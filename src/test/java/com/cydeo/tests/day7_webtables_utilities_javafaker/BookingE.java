@@ -9,8 +9,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.NoSuchElementException;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 public class BookingE {
@@ -67,10 +67,13 @@ public class BookingE {
             } //}while (!picture.isDisplayed());
 
 
+        //Set<String> allWindowHandles =driver.getWindowHandles();
+        LinkedHashSet<String> allWindowHandles =(LinkedHashSet<String>) driver.getWindowHandles();
 
+        /**
+         * Both of these code snippets are valid and achieve the desired result of preserving insertion order. The compiler recognizes the type hierarchy and allows you to assign a more specific type (LinkedHashSet) to a more general type (Set) without the need for explicit casting.
+         */
 
-
-        Set<String> allWindowHandles = driver.getWindowHandles();
 
             /*
         for (String eachHandle : allWindowHandles) {
@@ -84,10 +87,13 @@ public class BookingE {
 
              */
 
-        Iterator it=allWindowHandles.iterator();
-        String parent =(String) it.next();
-        String child=(String)it.next();
+        Iterator<String> it = allWindowHandles.iterator();
+        String parent = it.next();
+        System.out.println("parent window = " + parent);
+        String child= it.next();
+        System.out.println("child window = " + child);
         driver.switchTo().window(child);
+        System.out.println("driver.getTitle() = " + driver.getTitle());
 
         //3- Add your destination country ex: Egypt
         WebElement destinationInput = driver.findElement(By.xpath("//input[@aria-label='Type your destination']"));
