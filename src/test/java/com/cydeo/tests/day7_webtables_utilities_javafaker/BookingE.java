@@ -31,7 +31,7 @@ public class BookingE {
     public void multipleWindow() throws InterruptedException {
 
         //2-Click to this image
-        Thread.sleep(3000);
+        driver.findElement(By.xpath("//div[@role='dialog']//span")).click();
 
         /*
         boolean displayed = false;
@@ -57,7 +57,7 @@ public class BookingE {
         //do{
             //driver.navigate().refresh();
             try {
-                picture = driver.findElement(By.xpath("//a[@class='bh-awareness-campaign-index-banner__link bui-banner']"));
+                picture = driver.findElement(By.xpath("//a[@target='_isblank']"));
                 System.out.println("try executed");
                 picture.click();
             } catch (NoSuchElementException e) {
@@ -98,11 +98,11 @@ public class BookingE {
         //4-Click the date 2 Feb 2023
 
         driver.findElement(By.xpath("//div[contains(@class, 'checkin')]")).click();
-        driver.findElement(By.xpath("//td[@data-date='2023-02-02']")).click();
+        driver.findElement(By.xpath("//td[@data-date='2023-07-12']")).click();
 
 
         //5-Click 3 Feb 2023
-        driver.findElement(By.xpath("//td[@data-date='2023-02-03']"));
+        driver.findElement(By.xpath("//td[@data-date='2023-07-13']"));
         driver.findElement(By.xpath("//button[@class='sb-searchbox__button ']")).click();
 
         //7-Check if you found the exact text
@@ -110,7 +110,7 @@ public class BookingE {
         //Egypt: 5,034 properties found
 
 
-        WebElement headResult = driver.findElement(By.xpath("//h1[contains(@class,'e1f827110f')]"));
+        WebElement headResult = driver.findElement(By.xpath("//h1[@aria-live=\"assertive\"]"));
 
         String actualResult=headResult.getText();
         String expectedResult="Egypt: 5,034 properties found";
