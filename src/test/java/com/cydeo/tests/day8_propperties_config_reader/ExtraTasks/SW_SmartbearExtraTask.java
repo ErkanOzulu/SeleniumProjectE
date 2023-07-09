@@ -5,6 +5,7 @@ import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -69,8 +70,9 @@ public class SW_SmartbearExtraTask {
         order.click();
 
         //7. Select familyAlbum from product, set quantity to 2
-        WebElement familyAlbum = driver.findElement(By.xpath("//select[@id='ctl00_MainContent_fmwOrder_ddlProduct']/option[2]"));
-
+//        WebElement familyAlbum = driver.findElement(By.xpath("//select[@id='ctl00_MainContent_fmwOrder_ddlProduct']/option[2]"));
+        Select select=new Select(driver.findElement(By.xpath("//select[@id='ctl00_MainContent_fmwOrder_ddlProduct']")));
+        select.selectByVisibleText("FamilyAlbum");
         WebElement quantity = driver.findElement(By.xpath("//input[@id='ctl00_MainContent_fmwOrder_txtQuantity']"));
         quantity.sendKeys("2");
 
