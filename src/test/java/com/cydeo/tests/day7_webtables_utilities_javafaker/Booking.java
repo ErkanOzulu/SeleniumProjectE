@@ -32,7 +32,10 @@ public class Booking {
 
         //Clicking on the image
 
-        driver.findElement(By.xpath("//div[@aria-label ='Find homes for your next trip']")).click();
+      driver.findElement(By.xpath("//div[@role='dialog']//span")).click();
+
+
+        driver.findElement(By.xpath("//span[contains(.,' for your next trip')]")).click();
 
         //Get the handles of all the windows that are currently open using the command:
         Set<String> allWindowHandles = driver.getWindowHandles(); //which returns the set of handles.
@@ -52,14 +55,14 @@ public class Booking {
         //Enter the destination where you want to go and type Egypt
         driver.findElement(By.xpath("//input[@name='ss']")).sendKeys("Egypt");
 
-        driver.findElement(By.xpath("//td[@data-date='2023-02-02']")).click();
-        driver.findElement(By.xpath("//td[@data-date='2023-02-03']")).click();
+        driver.findElement(By.xpath("//td[@data-date='2023-07-12']")).click();
+        driver.findElement(By.xpath("//td[@data-date='2023-07-13']")).click();
         driver.findElement(By.xpath("//button[@data-sb-id='main']")).click();
 
         //
-        String actualText = driver.findElement(By.xpath("//h1[contains(@class,'e1f827110f')]")).getText();
+        String actualText = driver.findElement(By.xpath("//h1[@aria-live=\"assertive\"]")).getText();
         System.out.println(actualText);
-        String expectedText = "Egypt: 5,034 properties found";
+        String expectedText = "Egypt: 5,804 properties found";
 
         char[] ch = actualText.toCharArray();
 
