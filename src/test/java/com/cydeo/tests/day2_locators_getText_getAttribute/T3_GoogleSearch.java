@@ -1,6 +1,5 @@
 package com.cydeo.tests.day2_locators_getText_getAttribute;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -11,7 +10,7 @@ public class T3_GoogleSearch {
     public static void main(String[] args) {
 
         //1- Open a chrome browser
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
 

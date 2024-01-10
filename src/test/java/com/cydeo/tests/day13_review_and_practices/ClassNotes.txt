@@ -72,7 +72,7 @@ findElement(LOCATOR); ----> TIMER STARTS
 
 #1- Create object of WebDriverWait class.
 
-    WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
+     WebDriverWait wait=new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));;
 
 #2- Use the object we just created to create our condition.
 

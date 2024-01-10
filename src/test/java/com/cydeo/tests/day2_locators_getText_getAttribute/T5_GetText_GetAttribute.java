@@ -1,6 +1,6 @@
 package com.cydeo.tests.day2_locators_getText_getAttribute;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+ 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +10,7 @@ public class T5_GetText_GetAttribute {
 
     public static void main(String[] args) {
         //1- Open a chrome browser
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
         WebDriver driver=new ChromeDriver();
         driver.manage().window().maximize();
         //2- Go to: https://practice.cydeo.com/registration_form

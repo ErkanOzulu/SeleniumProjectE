@@ -1,6 +1,4 @@
 package com.cydeo.tests.day1_selenium_intro;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -9,7 +7,7 @@ public class T1_YahooTitleVerification {
     public static void main(String[] args) {
         //TC #1: Yahoo Title Verification
             //do set up for browser driver
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
 
         //1. Open Chrome browser
         WebDriver driver=new ChromeDriver();

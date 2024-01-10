@@ -1,6 +1,6 @@
 package com.cydeo.utilities;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+ 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -17,13 +17,13 @@ public class WebDriverFactory {
 // RETURN TYPE: "WebDriver"
     public static WebDriver getDriver(String browserType) {
         if (browserType.equalsIgnoreCase("chrome")) {
-            WebDriverManager.chromedriver().setup();
+            //WebDriverManager.chromedriver().setup();
             return new ChromeDriver();
         } else if (browserType.equalsIgnoreCase("firefox")) {
-            WebDriverManager.firefoxdriver().setup();
+            //WebDriverManager.firefoxdriver().setup();
             return new FirefoxDriver();
         } else if (browserType.equalsIgnoreCase("edge")) {
-            WebDriverManager.edgedriver().setup();
+            //WebDriverManager.edgedriver().setup();
             return new EdgeDriver();
         } else {
             System.out.println("Given browser type doesn't exist/or is not currently supported");
@@ -38,11 +38,11 @@ public class WebDriverFactory {
         WebDriver driver;
         switch (browserName.toLowerCase()){
             case "chrome":
-                WebDriverManager.chromedriver().setup();
+                //WebDriverManager.chromedriver().setup();
                 driver=new ChromeDriver();
                 break;
             case "firefox":
-                WebDriverManager.chromedriver().setup();
+                //WebDriverManager.chromedriver().setup();
                 driver=new FirefoxDriver();
                 break;
 

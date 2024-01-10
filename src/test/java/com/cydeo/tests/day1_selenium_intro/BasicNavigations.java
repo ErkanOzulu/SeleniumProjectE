@@ -1,6 +1,5 @@
 package com.cydeo.tests.day1_selenium_intro;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -9,7 +8,7 @@ public class BasicNavigations {
 
 
         //1-Set up browser driver
-        WebDriverManager.chromedriver().setup();
+//        //WebDriverManager.chromedriver().setup();
 
         //2-Create instance of the Selenium WebDriver
         //This is the line opening an empty browser

@@ -11,7 +11,7 @@ public class T1_locators_getText {
         //TC #1: NextBaseCRM, locators and getText() practice
         //1- Open a Chrome browser
 
-       // WebDriverManager.chromedriver().setup();
+       // //WebDriverManager.chromedriver().setup();
         //WebDriver driver=new ChromeDriver();
         WebDriver driver= WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();

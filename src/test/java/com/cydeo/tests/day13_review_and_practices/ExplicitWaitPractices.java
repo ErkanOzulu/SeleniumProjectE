@@ -35,7 +35,7 @@ public class ExplicitWaitPractices {
 
         //4- Wait until “loading bar disappears”
 //        Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-//        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
+//         WebDriverWait wait=new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));;
 //        wait.until(ExpectedConditions.invisibilityOf(dynamicControlsPage.loadingBar));
         BrowserUtils.waitForInvisibtyOf(dynamicControlsPage.loadingBar);
 
